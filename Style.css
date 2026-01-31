@@ -1,0 +1,51 @@
+
+.fintrack-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.fintrack-inp {
+    display: flex;
+    gap: 30px;
+    padding: 14px;
+}
+
+#Amt_{
+    width: 50px;
+    text-align: right;
+}
+
+#displayFin_{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    padding-top: 6%;
+    gap: 10%;
+    
+}
+.displayTotFin{
+    display: flex;
+    justify-content: center;
+}
+
+/*------------------------------------*/
+@media screen and (max-width: 600px) {
+  .fintrack-inp {
+    display: flex;
+    gap: 30px;
+    padding: 14px;
+    flex-direction: column;
+  }
+
+  #displayFin_{
+    justify-content: center;
+  }
+}

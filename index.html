@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="fintrack-head_" class="fintrack-head">
+        <h1>Finance Tracker</h1>
+        <div class="fintrack-inp">
+            <div>
+                <label for="">Amount: </label>
+                <input type="number" name="" id="Amt_">
+            </div>
+            <div>
+                <label for="">Catergory</label>
+                <select name="Catergory" id="Cat_">
+                    <option value="sal">Salary</option>
+                    <option value="gotMon">Got Money</option>
+                    <option value="CredRet">Credit Cart Return</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Type: </label>
+                <select name="Type" id="Typ_">
+                    <option value="inc">Income</option>
+                    <option value="exp">Expense</option>
+                </select>
+            </div>
+        </div>
+        <div id="fintrack-Submit_">
+            <input type="button" name="Submit" id="Sub" value="Submit" onclick="CatergoryTypeChange()">
+        </div>
+
+        <div id="displayFin_">
+            <div id="displayTot_" class="dispFin">
+                <h3>Total Ballance</h3>
+                <p id="displayTotalAmt_" class="displayTotFin"></p>
+            </div>
+            <div id="displayInc_" class="dispFin">
+                <h3>Total Income</h3>
+                <p id="displayTotalInc_" class="displayTotFin"></p>
+            </div>
+            <div id="displayExp_" class="dispFin">
+                <h3>Total Expense</h3>
+                <p id="displayTotalExp_" class="displayTotFin"></p>
+            </div>
+        </div>
+
+        <div id="fintrack-table_">
+            <table>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
