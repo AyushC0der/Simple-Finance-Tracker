@@ -11,27 +11,27 @@
         <h1>Finance Tracker</h1>
         <div class="fintrack-inp">
             <div>
-                <label for="">Amount: </label>
+                <label>Amount: </label>
                 <input type="number" name="" id="Amt_">
             </div>
             <div>
                 <label for="">Catergory</label>
                 <select name="Catergory" id="Cat_">
-                    <option value="sal">Salary</option>
-                    <option value="gotMon">Got Money</option>
-                    <option value="CredRet">Credit Cart Return</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Got Money">Got Money</option>
+                    <option value="Credit Cart Return">Credit Cart Return</option>
                 </select>
             </div>
             <div>
-                <label for="">Type: </label>
+                <label>Type: </label>
                 <select name="Type" id="Typ_">
-                    <option value="inc">Income</option>
-                    <option value="exp">Expense</option>
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
                 </select>
             </div>
         </div>
         <div id="fintrack-Submit_">
-            <input type="button" name="Submit" id="Sub" value="Submit" onclick="CatergoryTypeChange()">
+            <input type="button" name="Submit" id="Sub" value="Submit" onclick="AddElement()">
         </div>
 
         <div id="displayFin_">
@@ -50,9 +50,19 @@
         </div>
 
         <div id="fintrack-table_">
-            <table>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Catergory </th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
+
         </div>
 
     </div>
