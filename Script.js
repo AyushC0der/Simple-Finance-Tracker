@@ -32,46 +32,82 @@ var tableBody = document.querySelector("#fintrack-table_ tbody");
 DisplayTotalAmount();
 
 /*Functions*/
-document.addEventListener('DOMContentLoaded', function() {
-  const select = document.querySelector('#Typ_');
-  select.addEventListener('change', function() {
-    if(type.value === "Income"){
-        CatergorySel.options.length = 0;
-        console.log("Income");
-        IncomeCat.forEach(item => {
-            CatergorySel.add(new Option(item.text, item.value));
-        });
-    }
-    else if(type.value === "Expense"){
-        CatergorySel.options.length = 0;
-        console.log("Expense");
-        ExpenCat.forEach(item => {
-            CatergorySel.add(new Option(item.text, item.value));
-        });
-    }
-  });
-});   
-
-function AddElement()
+//Input
 {
-    AddRow(AmountInp.value, CatergorySel.value, type.value);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const select = document.querySelector('#Typ_');
+      select.addEventListener('change', function() {
+        if(type.value === "Income"){
+            CatergorySel.options.length = 0;
+            console.log("Income");
+            IncomeCat.forEach(item => {
+                CatergorySel.add(new Option(item.text, item.value));
+            });
+        }
+        else if(type.value === "Expense"){
+            CatergorySel.options.length = 0;
+            console.log("Expense");
+            ExpenCat.forEach(item => {
+                CatergorySel.add(new Option(item.text, item.value));
+            });
+        }
+      });
+    });   
 }
 
-function DisplayTotalAmount()
+//Display
 {
-    dispAmt.innerHTML = `₹ ${amount}`;
-    dispInc.innerHTML = `₹ ${income}`;
-    dispExp.innerHTML = `₹ ${expense}`;
+    function Update()
+    {
+        
+
+    }
+
+}
+
+//Table
+{
+
+    function AddElement()
+    {
+        AddRow(AmountInp.value, CatergorySel.value, type.value);
+        Update();
+    }
     
+    function DisplayTotalAmount()
+    {
+        dispAmt.innerHTML = `₹ ${amount}`;
+        dispInc.innerHTML = `₹ ${income}`;
+        dispExp.innerHTML = `₹ ${expense}`;
+        
+    }
+    
+    function AddRow(amt, cat, typ)
+    {
+        const row = document.createElement('tr');
+        row.innerHTML=`
+            <td>₹ ${amt}</td>
+            <td>${cat}</td>
+            <td>${typ}</td>
+            <td><button type="button" class="TableCross" id="CrossBtn" onclick="RemoveRow(this)">X</button></td>
+        `;
+        tableBody.appendChild(row);
+    }
+    
+    function RemoveRow(btn)
+    {
+        const row = btn.closest('tr');
+        row.remove();
+    }
 }
 
-function AddRow(amt, cat, typ)
+//Logic
 {
-    const row = document.createElement('tr');
-    row.innerHTML=`
-        <td>₹ ${amt}</td>
-        <td>${cat}</td>
-        <td>${typ}</td>
-    `;
-    tableBody.appendChild(row);
+
+    function Update()
+    {
+
+    }
+
 }

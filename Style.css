@@ -1,18 +1,56 @@
 
-.fintrack-head{
+/*Main*/
+.fintrack-head {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     gap: 10px;
+    color: white; /* Added to match your dark theme */
 }
+.fintrack-head h1 {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+
 
 .fintrack-inp {
     display: flex;
-    gap: 30px;
-    padding: 14px;
+    flex-direction: row;
+    gap: 40px;          /* Increases the "too close" gap significantly */
+    padding: 20px;
+    align-items: flex-start; 
 }
+
+.fintrack-inp div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fintrack-inp input#Amt_ {
+    width: 220px;
+    font-size: 18px;
+    padding: 12px;
+    background-color: #2b2b2b;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+.fintrack-inp select {
+    min-width: 180px;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #2b2b2b;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 
 #Amt_{
     width: 50px;
@@ -38,6 +76,7 @@
     align-items: center;
 
     border: 1px solid rgb(56, 56, 56);
+    border-radius: 7%;
     padding: .1rem 2.5rem;
     margin: .5rem 0.25rem;
     max-width: .5em 1.25rem;
@@ -47,8 +86,8 @@
 .dispFin p{
     font-size: x-large;
 }
-
-
+/*------------*/
+/*TABLE*/
 table {
   width: 100%;
   border-collapse: collapse;
@@ -88,7 +127,11 @@ table {
   overflow: hidden;
 }
 
-
+.TableCross{
+  width: 150%;
+  font-size: large;
+  text-align: center;
+}
 
 
 
@@ -115,6 +158,18 @@ table {
     }
     th, td {
         padding: 1rem 1.5rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #displayFin_{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    th, td {
+        padding: 1rem 1.8rem;
         text-align: left;
     }
 }
