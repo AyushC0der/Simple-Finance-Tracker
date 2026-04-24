@@ -14,8 +14,6 @@
     margin-bottom: 20px;
 }
 
-
-
 .fintrack-inp {
     display: flex;
     flex-direction: row;
@@ -49,6 +47,14 @@
     border: 1px solid #555;
     border-radius: 6px;
     cursor: pointer;
+}
+
+#Sub{
+    font-size: 300%;
+    border-radius: 5px;
+    border-color: #333;
+    background-color: aquamarine;
+    color: darkgreen;
 }
 
 
